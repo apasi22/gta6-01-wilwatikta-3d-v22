@@ -638,7 +638,7 @@ function updateCamera(dt) {
   G.cam.pitch = G.camPitch;
   if (G.state === 'title') {
     const a = G.time * 0.05;
-    G.cam.x = Math.sin(a) * 170; G.cam.z = -315 + Math.cos(a) * 170; G.cam.y = 45; G.cam.yaw = Math.atan2(-G.cam.x, -315 - G.cam.z); G.cam.pitch = 0.5;
+    G.cam.x = Math.sin(a) * 200; G.cam.z = 20 + Math.cos(a) * 200; G.cam.y = 55; G.cam.yaw = Math.atan2(-G.cam.x, 20 - G.cam.z); G.cam.pitch = 0.25;
   }
 }
 
