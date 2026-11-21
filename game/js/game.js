@@ -126,7 +126,7 @@ const G = {
   money: 100000, missionIndex: 0, stageIndex: 0, stageTimer: 0, stageT: 0,
   wanted: 0, wantedHeat: 0, hideTimer: 0, bustedTimer: 0,
   health: 100, score: 0,
-  keys: {}, camYaw: Math.PI, camPitch: 0.32, camDist: 13, orbit: 0,
+  keys: {}, camYaw: Math.PI, camPitch: 0.42, camDist: 9, orbit: 0,
   mouseDown: false, lastMX: 0, lastMY: 0,
   subtitle: '', subtitleT: 0, lineIndex: 0, lineT: 0,
   message: '', messageT: 0, passedReward: 0,
@@ -633,12 +633,12 @@ function updateCamera(dt) {
   const dist = G.camDist;
   G.cam.x = p.x - Math.sin(cy) * dist;
   G.cam.z = p.z - Math.cos(cy) * dist;
-  G.cam.y = 6 + dist * 0.42;
+  G.cam.y = 2.5 + dist * 0.3;
   G.cam.yaw = cy;
   G.cam.pitch = G.camPitch;
   if (G.state === 'title') {
     const a = G.time * 0.05;
-    G.cam.x = Math.sin(a) * 320; G.cam.z = -315 + Math.cos(a) * 320; G.cam.y = 90; G.cam.yaw = Math.atan2(-G.cam.x, -315 - G.cam.z); G.cam.pitch = 0.25;
+    G.cam.x = Math.sin(a) * 170; G.cam.z = -315 + Math.cos(a) * 170; G.cam.y = 45; G.cam.yaw = Math.atan2(-G.cam.x, -315 - G.cam.z); G.cam.pitch = 0.5;
   }
 }
 
